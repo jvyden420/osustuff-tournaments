@@ -2,11 +2,7 @@
   (body:mouseup)="onMouseUp()">
   <div class="item" *ngFor="let message of sortedMessages">
     <div class="image-container">
-      <img class="ui avatar image" [src]="
-          isSystem(message)
-            ? '/assets/osustuff-colors.png'
-            : '//a.ppy.sh/' + message.osuUserId
-        " />
+      <i class="ui large trash icon"></i>
     </div>
     <div class="content">
       <div class="header">

@@ -7,7 +7,7 @@
     <div class="four wide right aligned column">
       <div *ngIf="!viewingRoundResults && game.status !== 'new' && game.roundNumber > 1"
         class="tiny ui basic inverted button" (click)="toggleShowResults()">
-        View past round results
+        view past whip results
       </div>
     </div>
   </div>
@@ -15,11 +15,11 @@
   <div class="rank-restrictions" *ngIf="showAdditionalDescription && (game.minRank || game.maxRank)">
     <div class="ui grid">
       <div class="column">
-        <h3>This game has rank restrictions</h3>
-        <p *ngIf="game.minRank">- Only players above rank
-          {{game.minRank}} can join</p>
-        <p *ngIf="game.maxRank">- Only players below rank
-          {{game.maxRank}} can join</p>
+        <h3>this game has rank restrictions</h3>
+        <p *ngIf="game.minRank">- you cant join if ur below rank
+          {{game.minRank}} lol</p>
+        <p *ngIf="game.maxRank">- you cant join if ur above rank
+          {{game.maxRank}} lol</p>
       </div>
     </div>
   </div>
@@ -27,20 +27,20 @@
 
 <div class="ui inverted center aligned padded red segment" *ngIf="mePlayer && !isAlive && game.status !== 'new'">
   <div class="ui icon header">
-    <i class="crosshairs icon"></i>
-    You have been eliminated from the match.
+    <i class="trash icon"></i>
+    you got kek'd
   </div>
-  <p class="less-mr">You finished {{ rank | ordinal }} out of {{
-    totalPlayers }} players</p>
-  <p>You may continue watching or join another lobby!</p>
+  <p class="less-mr">you died at {{ rank | ordinal }} out of {{
+    totalPlayers }} naenaers</p>
+  <p>do it again</p>
 </div>
 
 <div class="ui inverted center aligned padded green segment"
   *ngIf="isWinner">
   <div class="ui icon header">
-    <i class="yellow trophy icon"></i>
-    Congratulations!
+    <i class="yellow trash icon"></i>
+    nice
     <br>
-    You won the match!
+    do it again
   </div>
 </div>

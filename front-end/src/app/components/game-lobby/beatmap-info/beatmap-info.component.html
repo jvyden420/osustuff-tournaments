@@ -13,52 +13,51 @@
             <div class="column">
               <a [href]="beatmapHref" target="_blank" class="beatmap-link">
                 <h3>
-                  <i class="download icon"></i> {{
+                  <i class="trash icon"></i> {{
                   beatmap.artist }} - {{ beatmap.title }}
                 </h3>
                 <h2 class="beatmap-version">
-                  <i class="small bullseye icon"></i> [{{
+                  <i class="small trash icon"></i> [{{
                   beatmap.version }}]
                 </h2>
               </a>
             </div>
             <div class="center aligned column">
               <a class="ui primary tiny button" target="_blank" [href]="dlLink">
-                <i class="download icon"></i>
+                <i class="trash icon"></i>
                 Download
               </a>
               <a class="ui primary tiny button" [href]="osuDirectLink">
-                <i class="download icon"></i>
+                <i class="trash icon"></i>
                 osu!direct
               </a>
             </div>
             <div class="right aligned column">
               <p>
-                Star Difficulty: <i class="yellow star outline icon"></i>
+                Star Difficulty: <i class="yellow trash outline icon"></i>
                 {{ starRating }}
               </p>
               <p>
-                Map Length: <i class=" stopwatch icon"></i> {{
+                Map Length: <i class=" trash icon"></i> {{
                 duration }}
               </p>
             </div>
             <div class="sixteen wide center aligned column" *ngIf="game.status === 'in-progress' && isAlive">
               <h3 class="ui icon header">
-                <i class="bullhorn icon"></i>
+                <i class="trash icon"></i>
                 The round has started. Play this map now!
               </h3>
               <h1 class="ui header">
                 {{ timeLeft }}
               </h1>
               <br>
-              <p><i class="yellow crosshairs icon"></i> Play in
+              <p><i class="yellow trash icon"></i> you can't play in
                 single player mode</p>
-              <p><i class="yellow crosshairs icon"></i> You can
+              <p><i class="yellow trash icon"></i> you can't
                 pick any rankable mods</p>
-              <p><i class="yellow crosshairs icon"></i> Play
-                this difficulty: [{{ beatmap.version }}]</p>
-              <p><i class="yellow crosshairs icon"></i> Only
-                your highest score will count</p>
+              <p><i class="yellow trash icon"></i> play
+                you can't this difficulty: [{{ beatmap.version }}]</p>
+              <p><i class="yellow trash icon"></i> none of your scores will count because i broke that too</p>
             </div>
           </div>
         </div>

@@ -1,19 +1,18 @@
 <div class="ui inverted padded segment no-bg">
-  <h3 class="ui header">Beatmap list</h3>
+  <h3 class="ui header">whips</h3>
   <p>
-    These are the maps that will be played on each round. Not
-    all rounds
-    will necessarily be played, however it is recommended to
+    these are the maps that will be played on each round. all rounds
+    will never be played however it is recommended to
     download
-    them before the match starts if your download speed is low.
-    There is a ~60 second break
-    in between each round.
+    them before the match starts to waste your bandwith.
+    there is a 1 second break
+    in between each round. use it wisely.
   </p>
 </div>
 <div class="ui inverted segment no-bg list-container">
   <div class="ui inverted relaxed divided list">
     <div class="item" *ngFor="let beatmap of beatmaps; let index = index;">
-      <p class="title">Round {{index + 1}}</p>
+      <p class="title">whip v{{index + 1}}</p>
       <div class="content">
         <div class="ui stackable two column grid">
           <div class="column">
@@ -26,10 +25,10 @@
               {{ beatmap.artist }} - {{ beatmap.title }}
               <p>
                 {{ beatmap.version }}
-                &nbsp; <i class="fitted star outline icon"></i>
+                &nbsp; <i class="fitted trash icon"></i>
                 {{
                 starRating(beatmap) }}
-                &nbsp; <i class="fitted stopwatch icon"></i> {{
+                &nbsp; <i class="fitted trash icon"></i> {{
                 getDuration(beatmap) }}
               </p>
             </a>
@@ -37,11 +36,11 @@
           <div class="right aligned column">
             <a class="ui primary tiny button"
               [href]="dlLink(beatmap)">
-              <i class="download icon"></i>
+              <i class="trash icon"></i>
               Download
             </a>
             <a class="ui primary tiny button" [href]="osuDirectLink(beatmap)">
-              <i class="download icon"></i>
+              <i class="trash icon"></i>
               osu!direct
             </a>
           </div>

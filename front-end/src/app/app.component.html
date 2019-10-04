@@ -2,43 +2,43 @@
 <div class="ui inverted menu" *ngIf="showMenu">
   <a [routerLink]="'/'" class="item">
     <img src="/assets/osustuff-colors.png" alt="">
-    <b>osuStuff</b>
+    <b>NAENAE PLAY</b>
   </a>
   <a class="item" [class.active]="url === '/lobbies'" [routerLink]="'/lobbies'">
-    <i class="play icon"></i>
-    Play
+    <i class="trash icon"></i>
+    NAENAE
   </a>
   <a class="item" [class.active]="url === '/leaderboard'" [routerLink]="'/leaderboard'">
-    <i class="trophy icon"></i>
-    Leaderboard
+    <i class="trash icon"></i>
+    WHIPPERS
   </a>
   <a class="item" [routerLink]="['/faq']">
-    <i class="info icon"></i>
+    <i class="trash icon"></i>
     FAQ
   </a>
 
   <div class="right menu">
     <div class="item" *ngIf="connectionLost" suiPopup popupInverted="true" popupText="The server may be restarting or down for maintenance.">
-      <i class="red notched circle loading icon"></i>
-      Connection Lost...
+      <i class="red trash loading icon"></i>
+      UH OH STINKY
     </div>
     <a class="item" [routerLink]="'/login'" *ngIf="!currentUsername">
-      <i class="sign-in icon"></i>
-      Log In
+      <i class="trash icon"></i>
+      ENABLE WHIPPING
     </a>
     <a *ngIf="currentGame" class="item" [routerLink]="['/lobbies/', currentGame.gameId]">
-      <i class="large orange play circle outline icon"></i>
-      Continue Game
+      <i class="large orange trash outline icon"></i>
+      GET BACK IN
     </a>
     <a *ngIf="currentUsername" class="item" [routerLink]="['/user/', currentUsername]">
-      <i class="user icon"></i>
+      <i class="trash icon"></i>
       {{ currentUsername }}
     </a>
     <a class="icon link item" href="https://discord.gg/wFxEaE9" target="_blank">
-      <i class="large discord icon"></i>
+      <i class="large trash icon"></i>
     </a>
     <a class="icon link item" href="https://github.com/Hughp135/osustuff-tournaments" target="_blank">
-      <i class="large github icon"></i>
+      <i class="large trash icon"></i>
     </a>
   </div>
 </div>

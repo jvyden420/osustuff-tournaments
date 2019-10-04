@@ -1,14 +1,11 @@
 <div class="ui inverted container section">
   <div class="ui grid">
     <div class="thirteen wide column">
-      <h1 class="ui inverted header">Matches</h1>
-      <p>Matches run 24/7 and currently require at least 4
-        people to start.
-        Join the <a href="https://discord.gg/zk84VMm">Discord
-          Server</a> for voice chat and other announcements!
+      <h1 class="ui inverted header">matches</h1>
+      <p>matches run pretty much never and currently require at 4 human souls to start
       </p>
       <p>
-        Players currently online: {{ onlinePlayersCount }}
+        naenaers currently online: {{ onlinePlayersCount }}
       </p>
     </div>
     <div class="three wide right aligned column">
@@ -22,44 +19,44 @@
   <h2 *ngIf="scheduledGames.length">Upcoming Events</h2>
   <app-lobbies-list *ngIf="scheduledGames.length" [lobbies]="scheduledGames"></app-lobbies-list>
 
-  <h2>Open Matches</h2>
+  <h2>matches you cant join cause i broke the login system</h2>
   <div class="ui inverted form">
     <div class="inline fields">
       <div class="field">
-        <label>Game Modes:</label>
+        <label>game modes</label>
       </div>
       <div class="field">
         <sui-checkbox [(ngModel)]="showGameModes['0']" (ngModelChange)="applyGameModeFilters()">
-          standard
+          whip mode
         </sui-checkbox>
       </div>
       <div class="field">
         <sui-checkbox [(ngModel)]="showGameModes['3']" (ngModelChange)="applyGameModeFilters()">
-          mania
+          bad
         </sui-checkbox>
       </div>
       <div class="field">
         <sui-checkbox [(ngModel)]="showGameModes['2']" (ngModelChange)="applyGameModeFilters()">
-          ctb
+          shit
         </sui-checkbox>
       </div>
       <div class="field">
         <sui-checkbox [(ngModel)]="showGameModes['1']" (ngModelChange)="applyGameModeFilters()">
-          taiko
+          bad
         </sui-checkbox>
       </div>
     </div>
   </div>
   <div *ngIf="!joinableGames.length" class="ui inverted segment">
     <p>
-      No matches are open to join at the moment. We are performing some updates so check back soon!
+      you're fucked
     </p>
   </div>
   <app-lobbies-list class="joinable" [lobbies]="joinableGames"></app-lobbies-list>
 
-  <h2 *ngIf="inProgressGames.length">In Progress Matches</h2>
+  <h2 *ngIf="inProgressGames.length">matches you still cant join</h2>
   <app-lobbies-list class="inprogress" [lobbies]="inProgressGames"></app-lobbies-list>
 
-  <h2 *ngIf="completedGames.length">Recently Completed Matches</h2>
+  <h2 *ngIf="completedGames.length">matches that you could join but didnt</h2>
   <app-lobbies-list class="finished" [lobbies]="completedGames"></app-lobbies-list>
 </div>

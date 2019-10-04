@@ -1,7 +1,7 @@
 <div class="ui inverted compact segment no-bg" (document:click)="onDocumentClick()">
-  <h4>Players ({{ alivePlayers.length }}/{{ players.length }})</h4>
+  <h4>naenaers ({{ alivePlayers.length }}/{{ players.length }})</h4>
   <p *ngIf="!players.length">
-    No players have joined yet.
+    no naenaers have joined yet
   </p>
 </div>
 <div class="ui relaxed inverted list" *ngIf="players.length">
@@ -23,20 +23,20 @@
           [href]="'https://www.twitch.tv/' + player.twitch.loginName"
           *ngIf="player.isStreaming">
           <i class="fitted red circle icon"></i>
-          Live
+          sub twitch prime bro
         </a>
       </div>
       <div class="description">
         <div class="player info">
           {{ player.ppRank ? ('#' + (player.ppRank | number)) :
           '—' }}
-          <span *ngIf="winningUser === player.username" class="text-muted">Winner</span>
+          <span *ngIf="winningUser === player.username" class="text-muted">wow he won</span>
           <span *ngIf="player.kicked" class="text-muted">
-            Player Kicked
+            kek'd outta this house
           </span>
           <span *ngIf="player.gameRank && winningUser !== player.username"
             class="text-muted">
-            Finished {{ player.gameRank | ordinal }}
+            failed at {{ player.gameRank | ordinal }}
           </span>
         </div>
       </div>
@@ -44,7 +44,7 @@
   </a>
   <div class="item" *ngIf="hiddenPlayers">
     <div class="content">
-      <p class="white">+{{ hiddenPlayers}} more players...</p>
+      <p class="white">+{{ hiddenPlayers}} more naenaers...</p>
     </div>
   </div>
 </div>

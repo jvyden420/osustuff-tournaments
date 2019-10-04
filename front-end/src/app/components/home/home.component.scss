@@ -3,55 +3,9 @@
 }
 
 .ui.inverted.segment.hero {
-  background: linear-gradient(334deg, #0f2136, #4c355f);
-  background-size: 400% 400%;
+  // background: black;
+  background-image: url(../../../assets/naenae.gif);
   padding: 60px 42px;
-
-  -webkit-animation: AnimationName 8s ease infinite;
-  -moz-animation: AnimationName 8s ease infinite;
-  animation: AnimationName 8s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 27% 0%
-    }
-
-    50% {
-      background-position: 74% 100%
-    }
-
-    100% {
-      background-position: 27% 0%
-    }
-  }
-
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 27% 0%
-    }
-
-    50% {
-      background-position: 74% 100%
-    }
-
-    100% {
-      background-position: 27% 0%
-    }
-  }
-
-  @keyframes AnimationName {
-    0% {
-      background-position: 27% 0%
-    }
-
-    50% {
-      background-position: 74% 100%
-    }
-
-    100% {
-      background-position: 27% 0%
-    }
-  }
 }
 
 .middle-section {

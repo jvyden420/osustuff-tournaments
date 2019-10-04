@@ -1,12 +1,12 @@
 <div class="ui inverted segment no-bg">
   <div class="ui stackable grid">
     <div class="ten wide column">
-      <h3>Match Results</h3>
+      <h3>the results nobodys been waiting for</h3>
     </div>
     <div class="six wide right aligned column">
       <div class="ui primary button" (click)="hideResults()" *ngIf="game.status !== 'complete'">
-        <i class="left angle icon"></i>
-        View live game
+        <i class="left trash icon"></i>
+        view live game
       </div>
     </div>
   </div>
@@ -21,11 +21,11 @@
     </h3>
     <div *ngIf="!round.scores || !round.scores.length">
       <p>
-        This round has no scores submitted
+        this round has no scores submitted for some reason. guess everyone died or something
       </p>
     </div>
     <div *ngIf="round.scores && round.scores.length">
-      <h3>Round {{round.roundNumber}} scores</h3>
+      <h3>whip v{{round.roundNumber}} scores</h3>
       <app-scores-table *ngIf="round" [scores]="round.scores" [game]="game"></app-scores-table>
     </div>
   </div>

@@ -6,19 +6,19 @@
       </a>
     </div>
     <div class="column">
-      <h5>Lobby Name</h5>
+      <h5>naenae name</h5>
       {{ game.title }}
     </div>
     <div class="column">
-      <h5>Status</h5>
+      <h5>status</h5>
       {{ status }}
     </div>
     <div class="column" *ngIf="game.status === 'complete'">
-      <h5>Winner</h5>
+      <h5>someone somehow won</h5>
       {{ game.winningUser ? game.winningUser.username : 'No one won!' }}
     </div>
     <div class="column">
-      <h5>Round{{ game.status === 'complete' ? 's' : '' }}</h5>
+      <h5>round{{ game.status === 'complete' ? 's' : '' }}</h5>
       {{ game.roundNumber || '-' }}
     </div>
     <div class="column" *ngIf="game.status !== 'complete'">
@@ -27,14 +27,14 @@
     </div>
     <div class="column" *ngIf="canEdit">
       <a class="ui primary button" [routerLink]="['/lobbies', game._id, 'edit']">
-        Edit Game
+        edit naenae
       </a>
     </div>
     <div class="column" *ngIf="game.status === 'new' && inGame">
-      <div class="ui red button" (click)="leaveGame()">Leave Game</div>
+      <div class="ui red button" (click)="leaveGame()">pussy out</div>
     </div>
     <div class="center aligned column" *ngIf="connectionLost"  suiPopup popupInverted="true" popupText="The server may be restarting or down for maintenance.">
-      <h5>Connection lost...</h5>
+      <h5>uh oh stinky</h5>
       <i class="red notched circle loading icon"></i>
     </div>
   </div>
